@@ -3,30 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css" type="text/css" />
-    <title>Home Page</title>
+    <title>Student Signup</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <h1>Hi student, Welcome to XYZ University!</h1>
-    <p>You can sign up to the platform to access all important notes & lectures.</p>
+<body class="bg-light">
 
-    <form action="/addUser" method="POST" target="_blank" id="signupForm">
-        <div class="field">
-            <label for="email">Email: </label>
-            <input type="text" placeholder="jane@email.com" name="email">
-        </div>
-        <div class="field">    
-        <label for="username">Username: </label>
-            <input type="text" placeholder="Jane Doe" name="username">
-        </div>
-        <div class="field">
-            <label for="password">Password: </label>
-            <input type="password" placeholder="password" name="password">
-        </div>
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow p-4" style="width: 100%; max-width: 450px;">
         
-        <button id="formBtn">Create Account</button>
-        
-    </form>
+        <h3 class="text-center mb-3">🎓 XYZ University</h3>
+        <p class="text-center text-muted">Sign up to access notes & lectures</p>
+
+        <form id="signupForm">
+            <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Enter your email" name="email" required>
+            </div>
+
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Enter your username" name="username" required>
+            </div>
+
+            <div class="mb-3">
+                <input type="password" class="form-control" placeholder="Enter your password" name="password" required>
+            </div>
+
+            <button class="btn btn-primary w-100">Create Account</button>
+        </form>
+    </div>
+</div>
+
+<!-- Toast -->
+<div class="toast-container position-fixed top-0 end-0 p-3">
+    <div id="toastMsg" class="toast align-items-center text-bg-success border-0">
+        <div class="d-flex">
+            <div class="toast-body" id="toastText"></div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
 </body>
-
 </html>
